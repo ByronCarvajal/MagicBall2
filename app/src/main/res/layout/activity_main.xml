@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,34 +8,47 @@
     tools:context=".MainActivity">
 
 
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/boton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/n"
+        android:src="@drawable/magicl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp" />
+
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Preguntale a la bola"
         android:layout_gravity="center"
-        android:layout_marginTop="24dp"
-        android:textSize="24sp"
-        android:textColor="#000000"
-        android:textStyle="italic|bold"/>
-
-    <ImageView
-        android:id="@+id/boton"
-        android:layout_width="291dp"
-        android:layout_height="330dp"
-        android:layout_gravity="center"
-        android:layout_margin="48dp"
-        app:srcCompat="@drawable/ball" />
+        android:text="Has una pregunta"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+        android:textStyle="italic|bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.061" />
 
     <TextView
         android:id="@+id/respuesta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="..."
         android:layout_gravity="center"
-        android:layout_marginTop="48dp"
-        android:textSize="50sp"
-        android:textColor="#000000"
-        android:textStyle="italic|bold"/>
+        android:text="Toca la bola magica"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="italic|bold"
+        app:layout_constraintBottom_toBottomOf="@+id/boton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.563"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.841" />
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
